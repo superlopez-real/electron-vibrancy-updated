@@ -1,20 +1,15 @@
-#electron-vibrancy
+# This is a fork of [Electron Vibrancy](https://github.com/arkenthera/electron-vibrancy)
 
-[![Build Status](https://travis-ci.org/arkenthera/electron-vibrancy.svg?branch=master)](https://travis-ci.org/arkenthera/electron-vibrancy)
-[![Build status](https://ci.appveyor.com/api/projects/status/41na3l88kgs8wir1?svg=true)](https://ci.appveyor.com/project/arkenthera/electron-vibrancy)
-[![npm version](https://badge.fury.io/js/electron-vibrancy.svg)](https://badge.fury.io/js/electron-vibrancy)
-![](https://img.shields.io/npm/dm/electron-vibrancy.svg)
-![](https://david-dm.org/arkenthera/electron-vibrancy/status.svg)
+This version is intended to update, and fix errors in the original project. All credit goes to the author and contributers of the original repository.
 
-# As of [#7898](https://github.com/electron/electron/pull/7898) Vibrancy is now supported in Electron for *macOS*.
-
+## Documentation
 This module is intended to give an [Electron](https://github.com/electron/electron) BrowserWindow blur on its behind. Electron does not support 'blur behind' from a transparent window and this module uses native API calls to achieve the effect.
 
 ![](http://i.imgur.com/0sRPzpn.png)
 
 ![](http://i.imgur.com/42jOnRV.png)
 
-# Running
+## Running
 
 Since this is a native addon, you will need your platforms build tools. Visual Studio,XCode etc.Also Python for `node-gyp`.
 
@@ -41,13 +36,13 @@ npm install electron-vibrancy
 
 To run tests see [scripts/ci](https://github.com/arkenthera/electron-vibrancy/blob/master/scripts/ci.sh)
 
-# Current Supported Platforms
+## Current Supported Platforms
 - macOS 10.10+
 - Windows 10 (stable) It just works ™
 - Windows 8.x (unstable + requires modifications)
 - Windows 7 (unstable + requires modifications)
 
-# Things to note
+## Things to note
 - `BrowserWindow` must be transparent. (`transparent:true`)
 - Requires Yosemite on macOS.
 - On Windows 8.x, this wont work because Microsoft completely removed Aero Glass feature. It is still possible though but it is not something that an end user should do.
@@ -57,7 +52,7 @@ See Platforms section for more info.
 
 Although it works, I dont recommend using this module on a machine below Windows 10. See platforms section below for more information for macOS.
 
-# API
+## API
 There are several methods depending on what you want to do and what platform you are on.
 
 ### `SetVibrancy(window, material)` _win_ , _macOS_
