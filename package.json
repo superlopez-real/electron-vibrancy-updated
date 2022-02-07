@@ -24,7 +24,7 @@
     "run-test-app": "./node_modules/.bin/electron ./spec/app",
     "lint-cpp": "python scripts/lint.py",
     "lint-coffee": "coffeelint spec",
-    "rebuild": "node-gyp rebuild --target=8.4.1 --runtime=electron --arch=x64 --debug --dist-url=https://atom.io/download/atom-shell",
+    "rebuild": "node-gyp rebuild --target=8.4.1 --runtime=electron --arch=x64 --debug --openssl_fips=X --dist-url=https://atom.io/download/atom-shell",
     "build": "node-gyp build --target=8.4.1 --runtime=electron --arch=x64 --debug --dist-url=https://atom.io/download/atom-shell",
     "nrebuild": "node-gyp rebuild --debug --arch=x64 --verbose",
     "nbuild": "node-gyp build --debug",
