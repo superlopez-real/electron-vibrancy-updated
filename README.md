@@ -18,7 +18,7 @@ git clone https://github.com/arkenthera/electron-vibrancy
 cd electron-vibrancy
 npm install
 cd spec/app # Go to sample app
-electron . # electron --version should be 1.6.8
+npm start
 ```
 
 To rebuild again:
@@ -28,29 +28,19 @@ npm run conf
 npm run rebuild
 ```
 
-Also available through NPM.
-
-```
-npm install electron-vibrancy
-```
-
 To run tests see [scripts/ci](https://github.com/arkenthera/electron-vibrancy/blob/master/scripts/ci.sh)
 
 ## Current Supported Platforms
 - macOS 10.10+
 - Windows 10 (stable) It just works ™
-- Windows 8.x (unstable + requires modifications)
-- Windows 7 (unstable + requires modifications)
 
 ## Things to note
 - `BrowserWindow` must be transparent. (`transparent:true`)
-- Requires Yosemite on macOS.
-- On Windows 8.x, this wont work because Microsoft completely removed Aero Glass feature. It is still possible though but it is not something that an end user should do.
 See Platforms section for more info.
-- On Windows 7, an Aero theme must be activated.
 - If you get `A dynamic link library (DLL) initialization routine failed.` error, it means that the module isn't compiled against Electron or compiled against the wrong version. 
+- If you run into issues with electron, try running `npm i` then `.\node_modules\.bin\electron-rebuild.cmd` to install npm modules, and rebuild electron.
 
-Although it works, I dont recommend using this module on a machine below Windows 10. See platforms section below for more information for macOS.
+Although it works, I dont recommend using this module on a machine below Windows 10. macOS is still under development in this updated version.
 
 ## API
 There are several methods depending on what you want to do and what platform you are on.
@@ -194,11 +184,10 @@ mainWindow.on('ready-to-show',function() {
 On **Windows 10** the addon uses ```SetWindowCompositionAttribute```, which is an undocumented API, which means it can be changed by Microsoft any time and break the functionality.
 
 ### MacOS
-Requires Yosemite and above.Some materials require 10.11+. Since this is the case, if you use a material that's not available on that macOS version, it will
-fallback to the default material value which is `0`, which might not be what you want.
+This new version will still need to be reviewed for function in macOS (TBD)
 
 
 ## License
 
 This project is under MIT.
-See [LICENSE](https://github.com/arkenthera/electron-vibrancy/blob/master/LICENSE)
+See [LICENSE](https://github.com/ralamiri/electron-vibrancy/blob/master/LICENSE)

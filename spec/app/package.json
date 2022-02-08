@@ -1,8 +1,11 @@
 {
   "name": "electron-vibrancy",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Enable blurring the back of your transparent BrowserWindow using this simple module.",
   "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
   "author": "arkenthera",
   "license": "MIT"
 }
