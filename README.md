@@ -14,7 +14,7 @@ This module is intended to give an [Electron](https://github.com/electron/electr
 Since this is a native addon, you will need your platforms build tools. Visual Studio,XCode etc.Also Python for `node-gyp`.
 
 ```
-git clone https://github.com/arkenthera/electron-vibrancy
+git clone https://github.com/ralamiri/electron-vibrancy-updated
 cd electron-vibrancy
 npm install
 cd spec/app # Go to sample app
