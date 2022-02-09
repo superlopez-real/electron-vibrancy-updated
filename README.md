@@ -15,7 +15,7 @@ Since this is a native addon, you will need your platforms build tools. Visual S
 
 ```
 git clone https://github.com/ralamiri/electron-vibrancy-updated
-cd electron-vibrancy
+cd electron-vibrancy-updated
 npm install
 cd spec/app # Go to sample app
 npm start
