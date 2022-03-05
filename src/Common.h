@@ -38,9 +38,6 @@
 #define PLATFORM_LINUX
 #elif defined(__APPLE__)
 #define PLATFORM_OSX
-#import <Foundation/Foundation.h>
-#import <AppKit/AppKit.h>
-#import <objc/objc-runtime.h>
 #endif
 
 #include <map>

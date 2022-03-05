@@ -29,22 +29,22 @@
                     ]
                 }]
             ],
-            "link_settings": {
-                "conditions":[
-                    ['OS=="mac"', {
-                        "libraries": [
-                            'Foundation.framework',
-                            'AppKit.framework',
-                            'ScriptingBridge.framework'
-                        ]
-                    }
-                ]]
-            },
-            "xcode_settings": {
-                "OTHER_CFLAGS": [
-                    "-x objective-c++ -stdlib=libc++"
-                ]
-            },
+            # "link_settings": {
+            #     "conditions":[
+            #         ['OS=="mac"', {
+            #             "libraries": [
+            #                 'Foundation.framework',
+            #                 'AppKit.framework',
+            #                 'ScriptingBridge.framework'
+            #             ]
+            #         }
+            #     ]]
+            # },
+            # "xcode_settings": {
+            #     "OTHER_CFLAGS": [
+            #         "-x objective-c++ -stdlib=libc++"
+            #     ]
+            # },
             "variables":{
                 "CURRENT_DIR":"<!(echo %~dp0)"
             },
