@@ -46,7 +46,10 @@ namespace Vibrancy {
         ACCENT_DISABLE = 0,
         ACCENT_ENABLE_GRADIENT = 1,
         ACCENT_ENABLE_TRANSPARENTGRADIENT = 2,
-        ACCENT_ENABLE_BLURBEHIND = 3
+        ACCENT_ENABLE_BLURBEHIND = 3,
+        ACCENT_ENABLE_ACRYLICBLURBEHIND = 4,
+        ACCENT_ENABLE_HOSTBACKDROP = 5, // RS5 1809
+        ACCENT_INVALID_STATE = 6
     };
 
     bool IsWindows10() {
@@ -56,7 +59,17 @@ namespace Vibrancy {
 
         GetVersionEx(&info);
 
-        return info.dwMajorVersion == 10;
+        return info.dwMajorVersion >= 10;
+    }
+    
+    bool IsRS4OrNewer() {
+        OSVERSIONINFOA info;
+        ZeroMemory(&info, sizeof(OSVERSIONINFOA));
+        info.dwOSVersionInfoSize = sizeof(OSVERSIONINFOA);
+
+        GetVersionEx(&info);
+
+        return info.dwBuildNumber > 17134;
     }
 
     bool SetBlurBehind(HWND hwnd, bool state) {
@@ -76,7 +89,7 @@ namespace Vibrancy {
                 // Only works on Win10
                 if (SetWindowCompositionAttribute) {
                     ACCENTPOLICY policy =
-                        { state ? ACCENT_ENABLE_BLURBEHIND
+                        { state ? (IsRS4OrNewer() ? ACCENT_ENABLE_ACRYLICBLURBEHIND : ACCENT_ENABLE_BLURBEHIND)
                             : ACCENT_DISABLE , 0, 0, 0 };
                     WINCOMPATTRDATA data = {19, &policy, sizeof(ACCENTPOLICY) };
                     result = SetWindowCompositionAttribute(hwnd, &data);
