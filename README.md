@@ -1,6 +1,6 @@
 # This is a fork of [Electron Vibrancy](https://github.com/arkenthera/electron-vibrancy)
 
-This version is intended to update, and fix errors in the original project. All credit goes to the author and contributers of the original repository.
+This version is intended to update, and fix errors in the original project. All credit goes to the author and contributers of the original repository, and the authors and contributers of the fork repositories that this fork relies on.
 
 ## Documentation
 This module is intended to give an [Electron](https://github.com/electron/electron) BrowserWindow blur on its behind. Electron does not support 'blur behind' from a transparent window and this module uses native API calls to achieve the effect.
