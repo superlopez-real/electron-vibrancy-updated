@@ -1,6 +1,6 @@
 {
-  "name": "l-electron-vibrancy",
-  "version": "0.2.0",
+  "name": "electron-vibrancy-updated",
+  "version": "0.2.1",
   "description": "Enable blurring the back of your transparent BrowserWindow using this simple module.",
   "main": "index.js",
   "devDependencies": {
@@ -34,7 +34,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ludwig-guru/l-electron-vibrancy.git"
+    "url": "git+https://github.com/vapormusic/electron-vibrancy-updated.git"
   },
   "keywords": [
     "electron",
@@ -48,7 +48,7 @@
   "license": "MIT",
   "gypfile": true,
   "bugs": {
-    "url": "https://github.com/ludwig-guru/l-electron-vibrancy/issues"
+    "url": "https://github.com/vapormusic/electron-vibrancy-updated/issues"
   },
-  "homepage": "https://github.com/ludwig-guru/l-electron-vibrancy#readme"
+  "homepage": "https://github.com/vapormusic/electron-vibrancy-updated#readme"
 }
