@@ -89,7 +89,7 @@ namespace Vibrancy {
                 // Only works on Win10
                 if (SetWindowCompositionAttribute) {
                     ACCENTPOLICY policy =
-                        { state ? (IsRS4OrNewer() ? ACCENT_ENABLE_ACRYLICBLURBEHIND : ACCENT_ENABLE_BLURBEHIND)
+                        { state ? ACCENT_ENABLE_BLURBEHIND
                             : ACCENT_DISABLE , 0, 0, 0 };
                     WINCOMPATTRDATA data = {19, &policy, sizeof(ACCENTPOLICY) };
                     result = SetWindowCompositionAttribute(hwnd, &data);
