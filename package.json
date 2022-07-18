@@ -4,23 +4,21 @@
   "description": "Enable blurring the back of your transparent BrowserWindow using this simple module.",
   "main": "index.js",
   "devDependencies": {
-    "chai": "^4.3.4",
+    "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
-    "coffeelint": "^1.4.1",
-    "coffeescript": "^2.6.1",
+    "coffeelint": "^2.1.0",
+    "coffeescript": "^2.7.0",
     "electron": "^19.0.4",
     "electron-rebuild": "^3.2.7",
-    "mocha": "^9.2.0",
+    "mocha": "^10.0.0",
     "node-gyp": "^9.0.0",
-    "node-pre-gyp": "^0.17.0",
-    "spectron": "^19.0.0"
+    "node-pre-gyp": "^1.0.9",
   },
   "dependencies": {
     "bindings": "^1.5.0",
     "nan": "^2.15.0"
   },
   "scripts": {
-    "test-spectron": "mocha --compilers coffee:coffeescript/register ./spec/vibrancy-spec.coffee",
     "test-module": "mocha --compilers coffee:coffeescript/register ./spec/module-spec.coffee",
     "run-test-app": "./node_modules/.bin/electron ./spec/app",
     "lint-cpp": "python scripts/lint.py",
